@@ -8,6 +8,6 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "my-oidc-vpc"
+    Name = "my-action-vpc"
   }
 }
