@@ -36,8 +36,10 @@ jobs:
           echo test, and deploy your project.
   
   stage-Release:
+  
 
       runs-on: ubuntu-latest
+      needs: stage-build
 
       steps:
         - name: Run command
