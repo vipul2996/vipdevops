@@ -38,6 +38,13 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
+      - name: Manual Workflow Approval
+        uses: trstringer/manual-approval@v1.9.0
+        with:
+          approvers: vipul2996
+          secret: ${{ secrets.PAT_TOKEN }}
+        if: success()
+
       - name: Terraform Apply
         run: terraform destroy -auto-approve
 
