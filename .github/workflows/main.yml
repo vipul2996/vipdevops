@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
 env:
-  TF_WORKING_DIR: ./Infrastructure
+  TF_WORKING_DIR: ./
 
 permissions:
   id-token: write   # Required for OIDC
