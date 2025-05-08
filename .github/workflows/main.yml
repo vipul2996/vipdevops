@@ -40,6 +40,9 @@ jobs:
       - name: Terraform Validate
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: terraform validate
+      
+      - name: Remove Resource from Terraform State
+        run: terraform state rm aws_s3_bucket.example
 
       - name: Terraform Plan
         working-directory: ${{ env.TF_WORKING_DIR }}
