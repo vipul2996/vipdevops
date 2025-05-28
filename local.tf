@@ -1,8 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "invstatebackup"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+    bucket           = "invstatebackup"
+    key              = "terraform.tfstate"
+    region           = "us-east-1"
+    dynamodb_table   = "invstatelock"
 
   }
 }
