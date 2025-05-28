@@ -3,7 +3,7 @@ terraform {
     bucket         = "invstatebackup"
     key            = "terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "invstatelock"
+    dynamodb_table = "inv-statelock"
 
   }
 }
